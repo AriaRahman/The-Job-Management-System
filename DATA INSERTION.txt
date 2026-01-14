@@ -1,0 +1,71 @@
+ //////////////////2.Table Name: authority////////////
+insert into authority values (11,'KHAN',01625804968)
+select * from authority
+                           //////////////////2.Table Name: EMPLOYEE/////////////////////
+
+insert into employee values (101,'RIAN RAHMAN','',01759502652,'PAINTER')
+
+insert into employee values(102,'ARIF','employed',01530502859,'TECHNECIAN')
+
+
+insert into employee values (103,'MONSUR','employed',01859006222,'CARPENTER')
+
+insert into employee values (104,'MIHAD','',01982350261,'PLUMBER')
+
+insert into employee values (105,'SAMI','employed',01152357264,'DRIVER')
+
+select * from employee
+                                //////////////////3.Table Name: STORE/////////////////////
+
+
+
+ insert into store(JACCNO,jname,jsalary,AID) values (1001,'CARPENTER',6000,11)
+
+ insert into store(JACCNO,jname,jsalary,AID) values (1002,'PAINTER',9500,11)
+ 
+ insert into store(JACCNO,jname,jsalary,AID) values (1003,'PLUMBER',8250,11)
+
+ insert into store(JACCNO,jname,jsalary,AID) values (1004,'TECHNECIAN',7700,11)
+ 
+ insert into store(JACCNO,jname,jsalary,AID) values (1005,'DRIVER',12440,11)
+ 
+ SELECT * FROM STORE
+                       //////////////////4.table Name: gather/////////////////////
+
+ insert into gather values (101,'RIAN RAHMAN',' ',01759502652,'PAINTER',11)
+
+insert into gather values (102,'ARIF','employed',01530502859,'TECHNECIAN',11)
+
+insert into gather values(103,'MONSUR','employed',01859006222,'CARPENTER',11)
+
+insert into gather values (104,'MIHAD',' ',01982350261,'PLUMBER',11)
+
+insert into gather values (105,'SAMI','employed',01152357264,'DRIVER',11)
+
+select * from gather
+
+
+                       //////////////////5.able Name: require/////////////
+
+insert into require values (1001,'CARPENTER',6000,103)
+
+insert into require values (1002,'PAINTER',9500,' ')
+
+insert into require values (1003,'PLUMBER',8250,11,' ')
+
+insert into require values (1004,'TECHNECIAN',7700,102)
+
+insert into require values (1005,'DRIVER',12440,105)
+
+select * from require
+                                 //////////////////6.Table Name: assign//////////////////////
+
+insert into assign values (101,'RIAN RAHMAN','',01759502652,'PAINTER', ,'', ,11)
+ 
+insert into assign alues(102,'ARIF','employed',01530502859,'TECHNECIAN',1004,'TECHNECIAN',7700,11)
+
+insert into assign values(103,'MONSUR','employed',01859006222,'CARPENTER',1001,'CARPENTER',6000,11)
+
+
+insert into assign values (104,'MIHAD','',01982350261,'PLUMBER', ,'',,11)
+insert into assign values (105,'SAMI','employed',01152357264,'DRIVER',1005,'DRIVER',12440,11)

@@ -1,0 +1,49 @@
+employment......aremploy
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''1
+
+create table authority (AID number(2) primary key,aname varchar (20),aphnnum varchar(11))
+
+describe authority
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''2
+
+create table employee (EMPID number(3) primary key,empname varchar(20),empjobstataus varchar (10), empcontact varchar(11),empprefjob varchar(15))
+
+describe employee
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''3
+
+create table store ( JACCNO number(4) primary key,jname varchar(20),jsalary varchar(10), AID number(2),constraint afk foreign key (AID) references authority (AID))
+
+describe store
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''4
+create table gather (EMPID number(3) primary key,empname varchar(20),empjobstataus varchar (10), empcontact varchar(11),empprefjob varchar(15), AID number(2),constraint authorityfk foreign key (AID) references authority (AID))
+
+describe gather
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''5
+
+create table require (JACCNO number(4) primary key, jname varchar(20), jsalary varchar(10), EMPID number(3), constraint empfk foreign key (EMPID) references employee (EMPID))
+
+describe require
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''6
+
+create table assign (EMPID number(3) primary key,empname varchar(20),empjobstataus varchar (10), empcontact varchar(11),empprefjob varchar(15), JACCNO number(4), jname varchar(20), jsalary varchar(10), AID number(2),constraint assignfk foreign key (AID) references authority (AID))
+
+ describe assign
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+
+
+ 
+
+ 
+
+ 
+
+

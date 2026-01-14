@@ -1,0 +1,31 @@
+SIMPLE QUERY: Show the details of employees.
+SELECT * FROM EMPLOYEE
+////////////////////////////////////
+QUERY WITH A SINGLE ROW FUNCTION: Show the salary of ‘SAMI’ in ‘$9,9999’ format.
+SELECT empid,to_char(jsalry,'$99,999') "employee salary" from assign where empname='SAMI'
+//////////////////////////////////////
+
+QUERY WITH AGGREGATE FUNCTION: Show the average,minimum salary of  all the jobs.
+select AVG(jsalary),min(jsalary) from store
+
+//////////////////////////////////////
+
+SINGLE ROW SUBQUERY:  Show the name, employee id & job  of the employee who gets more salary than Arif. 
+
+select empid,empname,jsalary from assign where jsalary>(select jsalary from assign where empname='ARIF')
+
+//////////////////////////////////////
+
+MULTIPLE ROW SUBQUERY:  Show the details of a job where employees get less salary than max salary of all the employees and empid is not null.
+
+select * from require where jsalary < all(select max(jsalary from require) and empid is not NULL
+///////////////////////////////////////
+SIMPLE: create a view named as driverview where the job accno 1005 will be shown over the columns job name, job account no ,authority id and job salary
+create view driverview as select 
+           jaccno,jname,jsalary,aid from store      
+            where jaccno=1005
+///////////////////////////////////////////////
+COMPLEX: create a view named as empview  where the job salary  will be  max salary shown over the column’s employee id,employee name, job accno, job name, and job salary
+ create view empview  as select empid,empname,jname,jsalary,jaccno 
+               from assign where jsalary in(select max(jsalary) from assign)  
+
