@@ -1,5 +1,5 @@
 
-<h1 align="center">💼 Employment DB — Java + MySQL</h1>
+<h1 align="center">Employment DB — Java + MySQL</h1>
 
 ## 📌 Overview
 This project demonstrates a **Java (JDBC)** program that connects to a **MySQL** database named `employment`, reads rows from the `store` table, and prints **Job Account No, Job Name, Salary, Authority ID**.  
